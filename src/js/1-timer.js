@@ -67,7 +67,6 @@ refs.btnStartElem.addEventListener('click', () => {
             clearInterval(intervalId);
             clearText()
             refs.inputElem.disabled = false;
-            
         }
         updateText()
     }, 1000);
