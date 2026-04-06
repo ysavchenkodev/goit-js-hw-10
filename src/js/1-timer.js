@@ -73,7 +73,7 @@ refs.btnStartElem.addEventListener('click', () => {
     }, 1000);
 
     function updateText() {
-        const markup = msToTime(diff);
+        const markup = convertMs(diff);
         refs.timerDElem.textContent = markup.days;
         refs.timerHElem.textContent = markup.hours;
         refs.timerMElem.textContent = markup.minutes;
@@ -94,7 +94,7 @@ refs.btnStartElem.addEventListener('click', () => {
 
 
 //#region fn ms --------------------------------------------------
-function msToTime(ms) {
+function convertMs(ms) {
  if (ms < 0) ms = 0;
   let days = Math.floor(ms / (1000 * 60 * 60 * 24));
   let hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
